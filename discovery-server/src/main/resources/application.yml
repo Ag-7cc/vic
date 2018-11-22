@@ -1,0 +1,35 @@
+server:
+  display-name: Discovery Server
+  port: 8761
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/javascript,application/json,application/font-sfnt,application/font-woff,application/font-woff2
+
+spring:
+  application:
+    name: Discovery-Server
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+  pid:
+    file: ${spring.application.name}.pid
+
+eureka:
+  instance:
+    non-secure-port: ${server.port}
+    non-secure-port-enabled: true
+    secure-port-enabled: false
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 5
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+      peerEurekaNodesUpdateIntervalMs: 60000
+      peerEurekaStatusRefreshTimeIntervalMs: 10000
+      renewalThresholdUpdateIntervalMs: 2000
+      renewalPercentThreshold: 0.85
+      enableSelfPreservation: true
+      waitTimeInMsWhenSyncEmpty: 0

@@ -1,0 +1,21 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+/node_modules/*
+/dist/*
+.idea/*
+
+bundle.js
+bundle.js.map
+shop/bundle.js
+shop/bundle.js.map
+*.iml

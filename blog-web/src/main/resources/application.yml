@@ -1,0 +1,65 @@
+server:
+  display-name: Blog Web
+  port: 9300
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/javascript,application/json,application/font-sfnt,application/font-woff,application/font-woff2
+
+
+spring:
+  application:
+    name: Blog-Web
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+    multipart:
+      maxFileSize: 80MB
+      maxRequestSize: 80MB
+  pid:
+    file: ${spring.application.name}.pid
+  thymeleaf:
+    cache: false
+    cache-period: 0
+  template:
+    cache: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 5
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+    response:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+
+simulate:
+  ribbon:
+    ConnectTimeout: 5000
+    ReadTimeout: 30000
+    MaxAutoRetries: 0
+    MaxAutoRetriesNextServer: 0
+    OkToRetryOnAllOperations: true
+
+logging:
+  file: /tmp/blog-web.log
