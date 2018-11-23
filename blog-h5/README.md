@@ -21,7 +21,7 @@
         'process.env':{
             'NODE_ENV': JSON.stringify('production')
         }
-    }),
+    }),````
     ...
 
 删除这段，就是开发模式，加上这段就是生产模式
@@ -36,5 +36,5 @@
 - index.html - 主页面
 - mock - Mock数据配置
 - package-lock.json - 项目当前依赖版本
-- package.json - 项目配置
+- package.json - 项目配置
 - webpack.config.js - webpack打包配置

@@ -5,6 +5,7 @@ import React from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import Banner from "../../components/banner/Banner";
+import Top from "../../components/top/Top";
 import "./Home.less";
 /**
  * 首页
@@ -328,6 +329,7 @@ class Home extends React.Component {
             </article>
 
             <Footer/>
+            <Top/>
         </div>
     }
 }
