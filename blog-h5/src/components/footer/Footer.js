@@ -38,16 +38,16 @@ class Footer extends React.Component {
                         <p className="footer-social">
                             <ul>
                                 <li>
-                                    <a href="http://v.t.sina.com.cn/share/share.php?url=https://resume.shanqibei.com" target="_blank">分享到微博</a>
+                                    <a href="http://v.t.sina.com.cn/share/share.php?url=https://shanqibei.com" target="_blank">分享到微博</a>
                                 </li>
                                 <li>
-                                    <a href="http://connect.qq.com/widget/shareqq/index.html?url=https://resume.shanqibei.com" target="_blank">分享到QQ</a>
+                                    <a href="http://connect.qq.com/widget/shareqq/index.html?url=https://shanqibei.com" target="_blank">分享到QQ</a>
                                 </li>
                                 <li>
-                                    <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://resume.shanqibei.com" target="_blank">分享到QQ空间</a>
+                                    <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://shanqibei.com" target="_blank">分享到QQ空间</a>
                                 </li>
                                 <li>
-                                    <a href="http://share.renren.com/share/buttonshare.do?link=https://resume.shanqibei.com" target="_blank">分享到人人</a>
+                                    <a href="http://share.renren.com/share/buttonshare.do?link=https://shanqibei.com" target="_blank">分享到人人</a>
                                 </li>
                             </ul>
                         </p>
