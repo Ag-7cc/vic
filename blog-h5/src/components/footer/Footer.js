@@ -35,6 +35,22 @@ class Footer extends React.Component {
                             <a href="/" target="_blank"> www.shanqibei.com</a> All Rights Reserved. 备案号：
                             <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">沪ICP备17033309号-1</a>
                         </p>
+                        <p className="footer-social">
+                            <ul>
+                                <li>
+                                    <a href="http://v.t.sina.com.cn/share/share.php?url=https://resume.shanqibei.com" target="_blank">分享到微博</a>
+                                </li>
+                                <li>
+                                    <a href="http://connect.qq.com/widget/shareqq/index.html?url=https://resume.shanqibei.com" target="_blank">分享到QQ</a>
+                                </li>
+                                <li>
+                                    <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://resume.shanqibei.com" target="_blank">分享到QQ空间</a>
+                                </li>
+                                <li>
+                                    <a href="http://share.renren.com/share/buttonshare.do?link=https://resume.shanqibei.com" target="_blank">分享到人人</a>
+                                </li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
                 <a href="/">

@@ -1,4 +1,5 @@
 /*footer*/
+@import "../../config";
 .footer-render {
   footer {
     background: #373D41;
@@ -36,6 +37,25 @@
     }
     p {
       margin-bottom: 5px
+    }
+  }
+
+  .footer-social {
+    ul {
+      display: block;
+      list-style: none;
+      li {
+        display: inline-block;
+        float: left;
+        width: max-content;
+        margin-right: 10px;
+        a{
+          color: #9dceff;
+          &:hover{
+            color: @cl_blue;
+          }
+        }
+      }
     }
   }
 }
