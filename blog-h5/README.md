@@ -1,8 +1,8 @@
-## blog - <small>单其贝的博客</small>
+## blog - <small>[单其贝的博客](https://shanqibei.com)</small>
 
 ***
 > 本站H5源码静态页面来源[杨青青个人博客](http://jxhx.yangqq.com/)
-> 并由自己改造成React项目，[点击跳转](https://shanqibei.com)
+> 并由自己改造成React项目
 
 ### 1,快速启动
 
