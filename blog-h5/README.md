@@ -35,6 +35,6 @@
 - config.less - 全局样式变量
 - index.html - 主页面
 - mock - Mock数据配置
-- package-lock.json - 项目当前依赖版本
+- package-lock.json - 项目当前依赖版本
 - package.json - 项目配置
 - webpack.config.js - webpack打包配置
