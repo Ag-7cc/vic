@@ -1,0 +1,78 @@
+
+.time-render {
+  .time-box {
+    background: url("../../../blog/images/abbg.png") no-repeat right top #fff;;
+    padding: 30px;
+    ul {
+      overflow: hidden;
+    }
+    li {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      &:hover i:before {
+        background: #080808;
+      }
+      i {
+        position: relative;
+        font-style: normal;
+        &:before {
+          content: " ";
+          height: 10px;
+          width: 10px;
+          border: 2px solid #cccaca;
+          background: #fff;
+          position: absolute;
+          top: 4px;
+          left: -26px;
+          border-radius: 50%;
+          -webkit-transition: all .5s ease;
+          -moz-transition: all .5s ease;
+          -ms-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease;
+        }
+      }
+    }
+    span {
+      position: relative;
+      line-height: 32px;
+      padding-right: 40px;
+      color: #999;
+      &:after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 40px;
+        background: #e0dfdf;
+        right: 18px;
+      }
+    }
+    /* page-list */
+    .page-list {
+      text-align: center;
+      color: #666;
+      width: 100%;
+      clear: both;
+      margin: 0 0 10px;
+      a {
+        color: #666;
+        margin: 0 5px 10px;
+        padding: 5px 10px;
+        background: #F7F7F7;
+        display: inline-block;
+      }
+      a:hover, & > b {
+        color: #3690cf;
+        color: #FFF;
+        background: #1C2327;
+      }
+      & > b {
+        padding: 5px 10px;
+      }
+      &.mt20 {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,222 @@
+/*header*/
+@import "../../config";
+
+.header-render {
+  header {
+    width: 100%;
+    padding: 5px 0;
+    background: #1C2327;
+    height: 50px;
+    &::before {
+      background: #000 linear-gradient(to left, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+      content: "";
+      height: 5px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .nav-box {
+      width: 1200px;
+      margin: auto;
+
+      /*旋转*/
+      .mna-vh {
+        display: none;
+        margin: 5px 0 0 0;
+        width: 24px;
+        height: 40px;
+        float: right;
+        text-align: center;
+        padding: 0 10px;
+        .nav-icon {
+          display: block;
+          position: relative;
+          width: 30px;
+          height: 5px;
+          background-color: #fff;
+          margin-top: 20px;
+          &:before, &:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 5px;
+            position: absolute;
+            background: #fff;
+            -webkit-transition-property: margin, -webkit-transform;
+            transition-property: margin, -webkit-transform;
+            transition-property: margin, transform;
+            transition-property: margin, transform, -webkit-transform;
+            -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+          }
+
+          &:before {
+            margin-top: -10px;
+          }
+
+          &:after {
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .logo {
+        float: left;
+        margin-right: 60px;
+        line-height: 50px;
+        color: #FFF;
+        font-size: 22px;
+        a {
+          color: #FFF
+        }
+        img {
+          margin-top: 14px;
+        }
+      }
+
+      /*箭头*/
+      .menu:before {
+        position: absolute;
+        content: "";
+        top: 22px;
+        right: 5px;
+        background: url("../../../blog/images/jt.png") no-repeat;
+        width: 8px;
+        height: 8px;
+        -ms-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+      }
+
+      .menu:hover:before {
+        transform: rotate(180deg)
+      }
+
+      /*nav*/
+      nav {
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+
+        #star-list {
+          li {
+            position: relative;
+            display: inline;
+            float: left;
+            width: max-content;
+
+            &:hover {
+              a {
+                color: @cl_blue;
+              }
+              ul.sub {
+                display: block;
+              }
+            }
+            a {
+              display: inline;
+              float: left;
+              padding: 0 20px;
+              color: #fff;
+            }
+
+            //  二级类目
+            ul.sub {
+              overflow: hidden;
+              position: absolute;
+              left: 0;
+              top: 50px;
+              background: #1C2327;
+              display: none;
+              z-index: 9;
+              li {
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                &:last-child {
+                  padding-bottom: 10px
+                }
+                a {
+                  color: #FFF;
+                  &:hover {
+                    color: @cl_blue;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .selected {
+          color: @cl_blue !important;
+        }
+      }
+
+      /*search*/
+      .search-ico {
+        margin-top: 5px;
+        width: 39px;
+        height: 39px;
+        float: right;
+        display: inline;
+        cursor: pointer;
+        background: url("../../../blog/images/bg.png") no-repeat center !important;
+      }
+    }
+
+  }
+
+  .search-box {
+    width: 1200px;
+    margin: 10px auto;
+    overflow: hidden;
+    background: #ffffff;
+    position: relative;
+    .search {
+      width: 50%;
+      margin: 20px auto;
+      background: #222;
+      border-radius: 0 5px 5px 0;
+      position: relative;
+      border: #ccc 1px solid;
+      display: none;
+
+      input.input-submit {
+        border: 0;
+        background: 0;
+        color: #fff;
+        outline: none;
+        position: absolute;
+        top: 10px;
+        right: 10%;
+      }
+
+      input.input-text {
+        border: 0;
+        line-height: 36px;
+        height: 36px;
+        width: 72%;
+        padding-left: 10px;
+        outline: none;
+        color: rgb(153, 153, 153);
+      }
+    }
+    .search-close {
+      background: url("../../../blog/images/close.png") no-repeat;
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 30px;
+      right: 5px;
+      top: 5px;
+      cursor: pointer;
+    }
+    .open {
+      display: block !important
+    }
+  }
+}
+

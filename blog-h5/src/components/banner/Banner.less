@@ -1,0 +1,158 @@
+.banner-render {
+  /*banner*/
+  .ban-box {
+    width: 68.5%;
+    overflow: hidden;
+    float: left;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    .banner {
+      width: 100%;
+      overflow: hidden;
+      float: left;
+
+      &:hover .controls .page.prev {
+        opacity: .7;
+        left: 20px
+      }
+
+      &:hover .controls .page.next {
+        opacity: .7;
+        right: 20px
+      }
+
+      .banner-image {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        font-family: "futura", arial;
+        overflow: hidden;
+        .slide {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          z-index: 1;
+          opacity: 0;
+          img {
+            width: 100%;
+            height: 260px;
+            margin: auto;
+          }
+          &.active {
+            z-index: 3;
+            opacity: 1;
+          }
+        }
+
+        .prev, .next {
+          position: absolute;
+          height: 32px;
+          line-height: 32px;
+          width: 40px;
+          top: 50%;
+          left: 50px;
+          z-index: 4;
+          margin-top: -25px;
+          cursor: pointer;
+          opacity: 0;
+          transition: all 150ms;
+        }
+
+        .prev {
+          background: url("../../../blog/images/left.png") no-repeat
+        }
+
+        .next {
+          left: auto;
+          right: 50px;
+          background: url("../../../blog/images/right.png") no-repeat
+        }
+
+        .pager-list {
+          position: absolute;
+          width: 100%;
+          height: 26px;
+          padding: 0;
+          line-height: 40px;
+          bottom: 0;
+          text-align: center;
+          z-index: 4;
+          li {
+            border-radius: 10px;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 7px;
+            background: #fff;
+            opacity: .9;
+            text-indent: -9999px;
+            cursor: pointer;
+            transition: all 150ms;
+            &:hover, &.active {
+              opacity: 1;
+              background: #12b7de;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*headline*/
+  .headline {
+    width: 30%;
+    float: right;
+    overflow: hidden;
+    ul {
+      height: 260px;
+      li {
+        width: 100%;
+        background: #000;
+        overflow: hidden;
+        height: 125px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        position: relative;
+        &:hover img {
+          transform: scale(1.1);
+          opacity: 1
+        }
+        a {
+          display: block;
+          overflow: hidden;
+          height: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          -moz-transition: all .5s ease;
+          -webkit-transition: all .5s ease;
+          -ms-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease;
+          transition: all 0.5s;
+          opacity: .7;
+        }
+        span {
+          bottom: 0;
+          position: absolute;
+          top: 30%;
+          left: 0;
+          right: 0;
+          color: #FFF;
+          text-align: center;
+          font-size: 15px;
+          margin-top: 5px;
+          padding: 0 40px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-height: 24px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}
