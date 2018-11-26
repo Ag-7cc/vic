@@ -65,9 +65,9 @@ mybatis:
   mapper-locations: classpath:mybatis/sqlmap/**/*.xml
 
 logging:
-  file: /tmp/tuanrourou-service.log
+  file: /tmp/blog-service.log
 #  pattern:
 #    console: "%d - %msg%n"
 #  level:
-#    com.tuanrourou.starter.service : debug
+#    com.shanqibei.vic.blog.service.biz : debug
 
