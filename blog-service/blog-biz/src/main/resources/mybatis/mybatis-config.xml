@@ -24,8 +24,6 @@
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>-->
     <typeAliases>
-        <package name="com.tuanrourou.starter.service.common.entity"/>
-        <package name="com.tuanrourou.starter.service.trade.entity"/>
     </typeAliases>
     <mappers>
     </mappers>
