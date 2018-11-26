@@ -13,7 +13,6 @@ var Ajax = {
         var obj = new XMLHttpRequest();
         obj.open("POST", "/api/h5/" + url, true);
         obj.setRequestHeader("Content-type", "application/json");  // 添加http头，发送信息至服务器时内容编码类型
-        obj.setRequestHeader("")
         obj.onreadystatechange = function () {
             if (obj.readyState == 4 && obj.status == 200 || obj.status == 304) {
                 fn.call(this, JSON.parse(obj.responseText));
