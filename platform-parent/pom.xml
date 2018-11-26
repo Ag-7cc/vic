@@ -31,6 +31,8 @@
         <okhttp3.version>3.9.0</okhttp3.version>
         <commons-lang3.version>3.6</commons-lang3.version>
         <commons-text.version>1.1</commons-text.version>
+        <zxing.core.version>3.1.0</zxing.core.version>
+        <zxing.javase.version>3.1.0</zxing.javase.version>
 
         <spring-boot-maven-plugin.version>1.5.8.RELEASE</spring-boot-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -128,6 +130,18 @@
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
                 <version>${pagehelper.version}</version>
+            </dependency>
+
+            <!-- qrcode -->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${zxing.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
+                <version>${zxing.javase.version}</version>
             </dependency>
 
             <dependency>

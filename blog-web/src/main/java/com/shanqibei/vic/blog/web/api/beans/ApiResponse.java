@@ -21,4 +21,12 @@ public class ApiResponse {
         apiResponse.setMessage(responseCodeEnum.message);
         return apiResponse;
     }
+
+    public static ApiResponse build(@NotNull ResponseCodeEnum responseCodeEnum, Object data) {
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setCode(responseCodeEnum.code);
+        apiResponse.setMessage(responseCodeEnum.message);
+        apiResponse.setData(data);
+        return apiResponse;
+    }
 }

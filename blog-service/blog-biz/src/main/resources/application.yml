@@ -1,0 +1,73 @@
+server:
+  display-name: Blog-Service
+  port: 0
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/javascript,application/json,application/font-sfnt,application/font-woff,application/font-woff2
+
+
+spring:
+
+  application:
+    name: Blog-Service
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?characterEncoding=UTF-8
+    username: root
+    password: 12345678
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    maximum-pool-size: 20
+    minimum-idle: 20
+    connection-timeout: 30000
+    hikari:
+      connection-init-sql: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+  pid:
+    file: ${spring.application.name}.pid
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 5
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+    response:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/sqlmap/**/*.xml
+
+logging:
+  file: /tmp/tuanrourou-service.log
+#  pattern:
+#    console: "%d - %msg%n"
+#  level:
+#    com.tuanrourou.starter.service : debug
+

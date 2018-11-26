@@ -1,6 +1,6 @@
 server:
   display-name: Blog Web
-  port: 9300
+  port: 9301
   compression:
     enabled: true
     mime-types: text/html,text/css,application/javascript,application/json,application/font-sfnt,application/font-woff,application/font-woff2
