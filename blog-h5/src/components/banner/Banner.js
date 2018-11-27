@@ -20,9 +20,14 @@ class Banner extends React.Component {
         this.initInterval = this.initInterval.bind(this);
         this.nextBanner = this.nextBanner.bind(this);
         this.prevBanner = this.prevBanner.bind(this);
+        this.curBanner = this.curBanner.bind(this);
     }
 
     componentWillMount() {
+
+    }
+
+    componentDidMount() {
         Ajax.post("banner/list", {}, (resp) => {
             if (resp.data.bannerList) {
                 this.setState({
@@ -31,9 +36,6 @@ class Banner extends React.Component {
                 });
             }
         });
-    }
-
-    componentDidMount() {
         this.initInterval();
     }
 
@@ -48,6 +50,16 @@ class Banner extends React.Component {
                 })
             }, 5000)
         })
+    }
+
+    curBanner(inx) {
+        if (inx >= 0 && inx < this.state.bannerList.length) {
+            this.setState({
+                active: inx
+            }, () => {
+                this.initInterval();
+            });
+        }
     }
 
     nextBanner() {
@@ -75,7 +87,7 @@ class Banner extends React.Component {
                             {
                                 this.state.bannerList.map((item, i) => {
                                     return <li className={i == this.state.active ? "slide active" : "slide"}>
-                                        <a href={item.link} target="_blank">
+                                        <a href={item.link ? item.link : null} target="_blank">
                                             <img src={item.image}/>
                                         </a>
                                     </li>
@@ -88,7 +100,7 @@ class Banner extends React.Component {
                             <ul className="pager-list">
                                 {
                                     this.state.bannerList.map((item, i) => {
-                                        return <li className={i == this.state.active ? "page active" : "page"}>0</li>
+                                        return <li className={i == this.state.active ? "page active" : "page"} onClick={this.curBanner.bind(this, i)}>0</li>
                                     })
                                 }
                             </ul>
@@ -96,13 +108,14 @@ class Banner extends React.Component {
                     </div>
                 </div>
             </div>
+
             {/* headline */}
             <div className="headline">
                 <ul>
                     {
                         this.state.imageText.map((item) => {
                             return <li>
-                                <a href={item.link} title={item.text} target="_blank">
+                                <a href={item.link ? item.link : null} title={item.text} target="_blank">
                                     <img src={item.image} alt={item.text}/>
                                     <span>{item.text}</span>
                                 </a>

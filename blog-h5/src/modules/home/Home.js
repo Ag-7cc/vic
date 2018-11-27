@@ -134,6 +134,26 @@ class Home extends React.Component {
                                 <span>创立“程序员节”最早是来自俄文《计算机世界》（《Компьютерра》）出版社的主编德米特里·门德列留科（Дмитрий Мендрелюк）在1996年7月15日的想法，当时计划将节日命名为“计算机用户节”，定在每年9月份的第一个星期五，称之为“纯净的星期五</span>
                                 <a href="/" target="_blank" className="read-more">文章阅读</a>
                             </li>
+                            <li>
+                                <i className="zt-pic">
+                                    <a href="/" target="_blank">
+                                        <img src="/blog/images/t2.jpg"/>
+                                    </a>
+                                </i>
+                                <b>为什么说10月24日是程序员的节日？</b>
+                                <span>创立“程序员节”最早是来自俄文《计算机世界》（《Компьютерра》）出版社的主编德米特里·门德列留科（Дмитрий Мендрелюк）在1996年7月15日的想法，当时计划将节日命名为“计算机用户节”，定在每年9月份的第一个星期五，称之为“纯净的星期五</span>
+                                <a href="/" target="_blank" className="read-more">文章阅读</a>
+                            </li>
+                            <li>
+                                <i className="zt-pic">
+                                    <a href="/" target="_blank">
+                                        <img src="/blog/images/t2.jpg"/>
+                                    </a>
+                                </i>
+                                <b>为什么说10月24日是程序员的节日？</b>
+                                <span>创立“程序员节”最早是来自俄文《计算机世界》（《Компьютерра》）出版社的主编德米特里·门德列留科（Дмитрий Мендрелюк）在1996年7月15日的想法，当时计划将节日命名为“计算机用户节”，定在每年9月份的第一个星期五，称之为“纯净的星期五</span>
+                                <a href="/" target="_blank" className="read-more">文章阅读</a>
+                            </li>
                         </ul>
                     </div>
 

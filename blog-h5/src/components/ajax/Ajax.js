@@ -11,7 +11,9 @@ var Ajax = {
     },
     post: function (url, data, fn) {         // datat应为'a=a1&b=b1'这种字符串格式，在jq里如果data为对象会自动将对象转成这种字符串格式
         var obj = new XMLHttpRequest();
-        obj.open("POST", "/api/h5/" + url, true);
+        //var host = "/api/h5/";
+        var host = "http://localhost:9301/api/h5/";
+        obj.open("POST", host + url, true);
         obj.setRequestHeader("Content-type", "application/json");  // 添加http头，发送信息至服务器时内容编码类型
         obj.onreadystatechange = function () {
             if (obj.readyState == 4 && obj.status == 200 || obj.status == 304) {

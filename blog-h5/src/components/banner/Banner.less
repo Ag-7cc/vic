@@ -156,3 +156,29 @@
     }
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .banner-render {
+    .ban-box {
+      width: 100%;
+      .banner-image {
+        height: 200px;
+      }
+    }
+    .headline {
+      width: 100%;
+      ul {
+        height: auto;
+        padding-bottom: 10px;
+        overflow: hidden;
+        li {
+          width: 49%;
+          float: left;
+          &:last-child {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,10 +11,12 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showSearch: false
+            showSearch: false,
+            menu: false,
         }
         this.showSearchForm = this.showSearchForm.bind(this);
         this.searchTextFocus = this.searchTextFocus.bind(this);
+        this.showMenu = this.showMenu.bind(this);
     }
 
     showSearchForm(open) {
@@ -35,14 +37,20 @@ class Header extends React.Component {
         }
     }
 
+    showMenu() {
+        this.setState({
+            menu: !this.state.menu
+        })
+    }
+
     render() {
         return <div className="header-render">
             <header>
                 <div className="nav-box">
-                    <h2 className="mna-vh"><span className="nav-icon"></span></h2>
+                    <h2 className={this.state.menu ? "mna-vh open" : "mna-vh"} onClick={this.showMenu}><span className="nav-icon"></span></h2>
                     <div className="logo"><a href="/">单其贝个人博客</a></div>
                     <nav>
-                        <ul id="star-list">
+                        <ul id="star-list" className={this.state.menu ? "show" : "hide"}>
                             <li><a href="#/" title="首页" className={!this.props.selected ? "selected" : ""}>网站首页</a></li>
                             <li><a href="#/article" className={this.props.selected == "article" ? "selected" : ""}>个人博客日记</a></li>
                             <li className="menu"><a href="/">网站制作</a>
