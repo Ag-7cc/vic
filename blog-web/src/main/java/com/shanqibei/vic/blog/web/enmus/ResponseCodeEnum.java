@@ -1,6 +1,8 @@
 package com.shanqibei.vic.blog.web.enmus;
 
 /**
+ * 响应码
+ *
  * @Author: vic
  * @CreateTime : 2018/11/22 14:33
  */

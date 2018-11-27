@@ -1,5 +1,6 @@
 package com.shanqibei.vic.blog.service.api.api.config;
 
+import com.shanqibei.vic.blog.service.api.dto.config.ImageConfigDTO;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,5 +16,5 @@ import java.util.List;
 public interface ConfigService {
 
     @RequestMapping(method = RequestMethod.POST, value = "/config/banner", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    List<Object> findBannerList();
+    List<ImageConfigDTO> findBannerList();
 }

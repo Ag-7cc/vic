@@ -13,10 +13,7 @@ import lombok.extern.log4j.Log4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +25,10 @@ import java.util.Objects;
  * @Author: vic
  * @CreateTime : 2018/11/22 14:57
  */
+@CrossOrigin(
+        origins = {"http://localhost:8080", "https://shanqibei.com", "https://www.shanqibei.com"},
+        methods = {RequestMethod.POST, RequestMethod.GET},
+        maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 @Log4j

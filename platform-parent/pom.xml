@@ -33,6 +33,7 @@
         <commons-text.version>1.1</commons-text.version>
         <zxing.core.version>3.1.0</zxing.core.version>
         <zxing.javase.version>3.1.0</zxing.javase.version>
+        <aliyun.oss.version>2.8.1</aliyun.oss.version>
 
         <spring-boot-maven-plugin.version>1.5.8.RELEASE</spring-boot-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -148,6 +149,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
                 <version>${elasticsearch.version}</version>
+            </dependency>
+
+            <!-- 阿里云oss -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.oss.version}</version>
             </dependency>
 
         </dependencies>
