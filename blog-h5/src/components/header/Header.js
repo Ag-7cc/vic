@@ -2,6 +2,7 @@
  * Created by vic on 2018/11/22.
  */
 import React from "react";
+import $ from "jquery";
 import "./Header.less";
 /**
  * 页头
@@ -13,10 +14,15 @@ class Header extends React.Component {
         this.state = {
             showSearch: false,
             menu: false,
+            force: true,
         }
         this.showSearchForm = this.showSearchForm.bind(this);
         this.searchTextFocus = this.searchTextFocus.bind(this);
         this.showMenu = this.showMenu.bind(this);
+    }
+
+    componentDidMount() {
+
     }
 
     showSearchForm(open) {
@@ -39,8 +45,11 @@ class Header extends React.Component {
 
     showMenu() {
         this.setState({
-            menu: !this.state.menu
-        })
+            menu: !this.state.menu,
+            force: false,
+        }, () => {
+            $("#star-list").toggleClass("show");
+        });
     }
 
     render() {
@@ -50,7 +59,7 @@ class Header extends React.Component {
                     <h2 className={this.state.menu ? "mna-vh open" : "mna-vh"} onClick={this.showMenu}><span className="nav-icon"></span></h2>
                     <div className="logo"><a href="/">单其贝个人博客</a></div>
                     <nav>
-                        <ul id="star-list" className={this.state.menu ? "show" : "hide"}>
+                        <ul id="star-list">
                             <li><a href="#/" title="首页" className={!this.props.selected ? "selected" : ""}>网站首页</a></li>
                             <li><a href="#/article" className={this.props.selected == "article" ? "selected" : ""}>个人博客日记</a></li>
                             <li className="menu"><a href="/">网站制作</a>
