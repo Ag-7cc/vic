@@ -427,21 +427,6 @@
         -moz-osx-font-smoothing: grayscale;
       }
 
-      .icon-youxiang:before {
-        content: "\e640";
-      }
-
-      .icon-weixin:before {
-        content: "\e501";
-      }
-
-      .icon---:before {
-        content: "\e607";
-      }
-      .icon-zhuye:before {
-        content: "\e64b";
-      }
-
       .link-more {
         margin: 15px;
         li {
@@ -458,28 +443,28 @@
               opacity: 0.5;
             }
           }
-          a.iconfont.icon-zhuye {
-            color: #ef5509;
-            font-size: 36px;
-          }
+          .iconfont{
+            &.icon-home {
+              color: #ef5509;
+              font-size: 36px;
+            }
+            &.icon-newemail {
+              color: #FF991A;
+              font-size: 28px;
+            }
+            &.icon-qq {
+              color: #1296DB;
+            }
 
-          a.iconfont.icon-youxiang {
-            color: #FF991A;
-            font-size: 28px;
-          }
-
-          a.iconfont.icon--- {
-            color: #1296DB;
-          }
-
-          a.iconfont.icon-weixin {
-            color: #07AF12;
+            &.icon-weixin3 {
+              color: #07AF12;
+            }
           }
         }
 
         #weixin {
           position: relative;
-          i {
+          i.img {
             display: block;
             position: absolute;
             bottom: 55px;

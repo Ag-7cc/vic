@@ -228,12 +228,24 @@ class Home extends React.Component {
                         <p>现居：{this.state.userInfo.address}</p>
                         <p>Email：{this.state.userInfo.email}</p>
                         <ul className="link-more">
-                            <li><a href="/" target="_blank" className="iconfont icon-zhuye" title="网站地址"></a></li>
-                            <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=390002333@qq.com" target="_blank" className="iconfont icon-youxiang" title="我的邮箱"></a></li>
-                            <li><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=390002333&amp;site=qq&amp;menu=yes" target="_blank" className="iconfont icon---" title="QQ联系我"></a></li>
+                            <li>
+                                <a href="/" target="_blank" className="iconfont icon-zhuye" title="网站地址">
+                                    <i className="iconfont icon-home"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=390002333@qq.com" target="_blank" className="iconfont icon-youxiang" title="我的邮箱">
+                                    <i className="iconfont icon-newemail"/>
+                                </a>
+                            </li>
+                            <li><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=390002333&amp;site=qq&amp;menu=yes" target="_blank" className="iconfont icon---" title="QQ联系我">
+                                <i className="iconfont icon-qq"/>
+                            </a></li>
                             <li id="weixin">
-                                <a href="/blog/images/qrcode-wx.jpg" target="_blank" className="iconfont icon-weixin" title="关注我的微信"></a>
-                                <i><img src="/blog/images/qrcode-wx.jpg"/></i>
+                                <a href="/blog/images/qrcode-wx.jpg" target="_blank" className="iconfont icon-weixin" title="关注我的微信">
+                                    <i className="iconfont icon-weixin3"/>
+                                </a>
+                                <i className="img"><img src="/blog/images/qrcode-wx.jpg"/></i>
                             </li>
                         </ul>
                     </div>
