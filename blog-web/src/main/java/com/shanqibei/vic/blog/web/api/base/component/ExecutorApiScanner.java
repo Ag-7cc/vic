@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * @Author: vic
@@ -39,13 +39,12 @@ public class ExecutorApiScanner {
                     executorExpand.setExecutor(executor);
                     // 获取注解
                     executorExpand.setExecutorApi(annotation);
-                    for (Method method : executor.getClass().getMethods()) {
-                        if (Objects.nonNull(method) && method.getParameterTypes().length == 2) {
-                            executorExpand.setParamClazz(method.getParameterTypes()[1]);
-                            break;
-                        }
+                    // 获取父类泛型参数类型
+                    Type superclass = bean.getClass().getGenericSuperclass();
+                    if (superclass instanceof ParameterizedType) {
+                        executorExpand.setParamType(((ParameterizedType) superclass).getActualTypeArguments()[0]);
                     }
-                    if (executorExpand.getExecutor() != null && executorExpand.getExecutorApi() != null && executorExpand.getParamClazz() != null) {
+                    if (executorExpand.getExecutor() != null && executorExpand.getExecutorApi() != null && executorExpand.getParamType() != null) {
                         executorMap.put(annotation.value(), executorExpand);
                     }
                 }

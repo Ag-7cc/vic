@@ -3,7 +3,9 @@ package com.shanqibei.vic.blog.web.api.base;
 import com.shanqibei.vic.blog.web.annotations.ExecutorApi;
 import lombok.Data;
 import lombok.Setter;
+import lombok.ToString;
 
+import java.lang.reflect.Type;
 import java.util.Map;
 
 /**
@@ -20,9 +22,10 @@ public class ExecutorFactory {
     }
 
     @Data
+    @ToString
     public static class ExecutorExpand {
         private ApiRequestExecutor executor;
         private ExecutorApi executorApi;
-        private Class paramClazz;
+        private Type paramType;
     }
 }

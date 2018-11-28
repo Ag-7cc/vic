@@ -55,7 +55,7 @@ public class ApiController {
             JSONObject jsonParam = appJsonRequest.getParam();
             Object param = null;
             if (jsonParam != null) {
-                param = jsonParam.toJavaObject(executorExpand.getParamClazz());
+                param = jsonParam.toJavaObject(executorExpand.getParamType());
             }
             ApiResponse response = executorExpand.getExecutor().execute(requestContext, param);
             return response;
@@ -84,7 +84,7 @@ public class ApiController {
             JSONObject jsonParam = h5JsonRequest.getParam();
             Object param = null;
             if (jsonParam != null) {
-                param = jsonParam.toJavaObject(executorExpand.getParamClazz());
+                param = jsonParam.toJavaObject(executorExpand.getParamType());
             }
             ApiResponse response = executorExpand.getExecutor().execute(requestContext, param);
             return response;
