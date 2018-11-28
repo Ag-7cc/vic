@@ -14,7 +14,6 @@ class Header extends React.Component {
         this.state = {
             showSearch: false,
             menu: false,
-            force: true,
         }
         this.showSearchForm = this.showSearchForm.bind(this);
         this.searchTextFocus = this.searchTextFocus.bind(this);
@@ -46,7 +45,6 @@ class Header extends React.Component {
     showMenu() {
         this.setState({
             menu: !this.state.menu,
-            force: false,
         }, () => {
             $("#star-list").toggleClass("show");
         });

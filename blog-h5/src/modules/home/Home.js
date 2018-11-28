@@ -6,11 +6,31 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import Banner from "../../components/banner/Banner";
 import Top from "../../components/top/Top";
+import Ajax from "../../components/ajax/Ajax";
 import "./Home.less";
 /**
  * 首页
  */
 class Home extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            userInfo: {},
+        };
+    }
+
+
+    componentDidMount() {
+        Ajax.post("admin/info", {id: 1}, (resp) => {
+            if (resp.data.userInfo) {
+                this.setState({
+                    userInfo: resp.data.userInfo
+                })
+            }
+        })
+    }
+
     render() {
         return <div className="home-render">
             <Header/>
@@ -203,10 +223,10 @@ class Home extends React.Component {
                     {/*  个人信息 */}
                     <div className="card">
                         <h2>我的名片</h2>
-                        <p>网名：DanceSmile | 即步非烟</p>
-                        <p>职业：Web前端设计师、网页设计</p>
-                        <p>现居：四川省-成都市</p>
-                        <p>Email：dancesmiling@qq.com</p>
+                        <p>网名：{this.state.userInfo.nickName}</p>
+                        <p>职业：{this.state.userInfo.work}</p>
+                        <p>现居：{this.state.userInfo.address}</p>
+                        <p>Email：{this.state.userInfo.email}</p>
                         <ul className="link-more">
                             <li><a href="/" target="_blank" className="iconfont icon-zhuye" title="网站地址"></a></li>
                             <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=390002333@qq.com" target="_blank" className="iconfont icon-youxiang" title="我的邮箱"></a></li>

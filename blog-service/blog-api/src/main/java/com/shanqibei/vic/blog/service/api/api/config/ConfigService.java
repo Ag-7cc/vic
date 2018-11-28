@@ -12,7 +12,7 @@ import java.util.List;
  * @Author: vic
  * @CreateTime : 2018/11/26 15:52
  */
-@FeignClient("blog-Service")
+@FeignClient("blog-service")
 public interface ConfigService {
 
     @RequestMapping(method = RequestMethod.POST, value = "/config/banner", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
