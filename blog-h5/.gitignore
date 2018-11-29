@@ -14,8 +14,4 @@
 /dist/*
 .idea/*
 
-bundle.js
-bundle.js.map
-shop/bundle.js
-shop/bundle.js.map
 *.iml
