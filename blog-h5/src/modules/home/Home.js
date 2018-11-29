@@ -179,9 +179,7 @@ class Home extends React.Component {
 
                     {/* 广告 */}
                     <div className="ad white-bg">
-                        <a href="/" target="_blank">
-                            <img src="/blog/images/longad.jpg"/>
-                        </a>
+                        <a href="https://www.vultr.com/?ref=7357003" target="_blank"><img src="https://www.vultr.com/media/banner_1.png"/></a>
                     </div>
 
                     {/* 最新博文 */}
