@@ -13,6 +13,6 @@ import org.apache.ibatis.annotations.Select;
 public interface UserDao {
     String fields = " `UserId`, `Name`, `NickName`, `Email`, `Address`, `Work`, `AddTime`, `UpdateTime` ";
 
-    @Select("SELECT " + fields + " FROM `User` WHERE `Id` = #{id}")
+    @Select("SELECT " + fields + " FROM `User` WHERE `UserId` = #{id}")
     User selectById(@Param("id") int id);
 }

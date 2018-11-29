@@ -12,7 +12,6 @@ import java.util.Date;
 public class ImageConfig {
     private Integer imageId;
     private String image;
-    private Integer linkType;
     private String link;
     private String text;
     private Integer priority;
