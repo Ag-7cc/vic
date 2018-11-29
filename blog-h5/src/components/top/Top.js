@@ -8,9 +8,22 @@ import "./Top.less";
  */
 class Top extends React.Component {
 
+    constructor() {
+        super();
+        this.goTop = this.goTop.bind(this);
+    }
+
+    goTop() {
+        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentScroll > 0) {
+            window.requestAnimationFrame(this.goTop);
+            window.scrollTo(0, currentScroll - (currentScroll / 5));
+        }
+    }
+
     render() {
         return <div className="top-render">
-            <a href="/#">
+            <a onClick={this.goTop}>
                 <div className="top"></div>
             </a>
         </div>

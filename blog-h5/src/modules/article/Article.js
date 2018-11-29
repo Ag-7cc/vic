@@ -7,6 +7,7 @@ import Footer from "../../components/footer/Footer";
 import ArticleFoot from "../../components/articlefoot/ArticleFoot";
 import ArticleRef from "../../components/articleref/ArticleRef";
 import ArticleRandom from "../../components/articlerandom/ArticleRandom";
+import Top from "../../components/top/Top";
 import "./Article.less";
 /**
  * 文章
@@ -51,6 +52,7 @@ class Article extends React.Component {
             </article>
 
             <Footer/>
+            <Top/>
         </div>
     }
 }
