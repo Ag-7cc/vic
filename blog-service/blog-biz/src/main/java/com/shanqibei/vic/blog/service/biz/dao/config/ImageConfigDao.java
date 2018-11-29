@@ -14,7 +14,7 @@ import java.util.Set;
  */
 @Mapper
 public interface ImageConfigDao {
-    String fields = " `Id`, `Image`, `LinkType`, `Link`, `Text`, `Priority`, `BizType`, `AddTime`, `UpdateTime` ";
+    String fields = " `ImageId`, `Image`, `LinkType`, `Link`, `Text`, `Priority`, `BizType`, `AddTime`, `UpdateTime` ";
 
     @Select("SELECT " + fields + " FROM `ImageConfig` WHERE `BizType` = #{bizType} ")
     List<ImageConfig> selectByBizType(@Param("bizType") int bizType);

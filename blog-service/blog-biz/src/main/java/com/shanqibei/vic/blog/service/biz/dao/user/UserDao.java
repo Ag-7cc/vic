@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Select;
  */
 @Mapper
 public interface UserDao {
-    String fields = " `Id`, `Name`, `NickName`, `Email`, `Address`, `Work`, `AddTime`, `UpdateTime` ";
+    String fields = " `UserId`, `Name`, `NickName`, `Email`, `Address`, `Work`, `AddTime`, `UpdateTime` ";
 
     @Select("SELECT " + fields + " FROM `User` WHERE `Id` = #{id}")
     User selectById(@Param("id") int id);

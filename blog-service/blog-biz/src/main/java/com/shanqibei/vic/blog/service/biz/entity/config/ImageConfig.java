@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @Data
 public class ImageConfig {
-    private Integer id;
+    private Integer imageId;
     private String image;
     private Integer linkType;
     private String link;
