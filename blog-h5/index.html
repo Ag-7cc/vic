@@ -47,5 +47,12 @@
 <!-- 使用mock数据 -->
 <!--<script src="/node_modules/mockjs/dist/mock-min.js"></script>-->
 <!--<script src='mock.js'></script>-->
+<!--<script src="bundle.js"></script>-->
+<script>
+    document.write('<script src="blog/webpack.assets.js?v=' + Math.random() + '"><\/script>');
+</script>
+<script>
+    document.write('<script src="' + window.WEBPACK_ASSETS['main'].js + '"><\/script>');
+</script>
 </body>
 </html>
