@@ -1,1 +1,1 @@
-window.WEBPACK_ASSETS={"main":{"js":"bundle.1ef2c7e85825baab56a0.js"}}
+window.WEBPACK_ASSETS={"main":{"js":"bundle.e60de347f4c76a0c4861.js"}}
