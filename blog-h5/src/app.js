@@ -14,6 +14,7 @@ import "./m.less";
 
 var routerHistory = require('react-router').useRouterHistory;
 const appHistory = routerHistory(createHashHistory)({queryKey: false});
+
 ReactDOM.render((
                 <Router history={appHistory}>
                     <Route path="/" component={Home}/>
