@@ -10,7 +10,7 @@ import java.util.Date;
  */
 @Data
 public class ImageConfigDTO {
-    private Integer imageId;
+    private Integer id;
     private String image;
     private String link;
     private String text;
