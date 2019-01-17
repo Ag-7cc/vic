@@ -1,18 +1,13 @@
 package com.shanqibei.vic.blog.service.biz.dao.user;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.shanqibei.vic.blog.service.biz.entity.user.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * @Author: vic
  * @CreateTime : 2018/11/28 16:13
  */
 @Mapper
-public interface UserDao {
-    String fields = " `UserId`, `Name`, `NickName`, `Email`, `Address`, `Work`, `AddTime`, `UpdateTime` ";
-
-    @Select("SELECT " + fields + " FROM `User` WHERE `UserId` = #{id}")
-    User selectById(@Param("id") int id);
+public interface UserDao extends BaseMapper<User> {
 }

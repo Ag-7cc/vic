@@ -1,8 +1,9 @@
 package com.shanqibei.vic.blog.service.biz.biz.config;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.github.pagehelper.PageHelper;
-import com.google.common.collect.Sets;
+import com.google.common.collect.ImmutableSet;
 import com.shanqibei.vic.blog.service.api.api.config.ConfigService;
 import com.shanqibei.vic.blog.service.api.dto.config.ImageConfigDTO;
 import com.shanqibei.vic.blog.service.api.enums.ImageConfigBizTypeEnum;
@@ -27,7 +28,7 @@ public class ConfigServiceImpl implements ConfigService {
     @Override
     public List<ImageConfigDTO> findBannerList() {
         PageHelper.orderBy("BizType, Priority DESC");
-        List<ImageConfig> imageConfigs = imageConfigDao.selectByBizTypes(Sets.newHashSet(ImageConfigBizTypeEnum.Banner.code, ImageConfigBizTypeEnum.ImageText.code));
+        List<ImageConfig> imageConfigs = imageConfigDao.selectList(new LambdaQueryWrapper<ImageConfig>().in(ImageConfig::getBizType, ImmutableSet.of(ImageConfigBizTypeEnum.Banner.code, ImageConfigBizTypeEnum.ImageText.code)));
         return VicBeanUtils.copyList(imageConfigs, ImageConfigDTO.class);
     }
 }

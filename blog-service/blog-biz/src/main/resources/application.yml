@@ -7,7 +7,6 @@ server:
 
 
 spring:
-
   application:
     name: Blog-Service
   datasource:
@@ -64,10 +63,20 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/sqlmap/**/*.xml
 
+mybatis-plus:
+    configuration:
+      mapUnderscoreToCamelCase: false
+    globalConfig:
+      dbConfig:
+        capitalMode: false
+        dbType: mysql
+        idType: auto
+        tableUnderline: true
+
 logging:
   file: /tmp/blog-service.log
 #  pattern:
 #    console: "%d - %msg%n"
-#  level:
-#    com.shanqibei.vic.blog.service.biz : debug
+  level:
+    com.shanqibei.vic.blog.service.biz : error
 
