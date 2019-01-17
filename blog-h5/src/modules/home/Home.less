@@ -31,14 +31,22 @@
         position: relative;
         cursor: pointer
       }
-      .news-current:after {
-        content: "";
-        background: #000;
-        width: 100px;
-        height: 2px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+      .news-current{
+        &:hover:after {
+          width: 120px;
+        }
+        &:after {
+          content: "";
+          background: #000;
+          width: 100px;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          -moz-transition: all .5s ease;
+          -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+        }
       }
     }
 
